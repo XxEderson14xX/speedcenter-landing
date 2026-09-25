@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedCenter · Taller Automotriz en Toluca | Cotiza tu servicio en línea</title>
+<meta name="description" content="SpeedCenter es tu taller automotriz de confianza en San Jorge Pueblo Nuevo, Toluca. Afinación, frenos, diagnóstico y mantenimiento preventivo. Solicita tu cotización gratis en línea.">
+<meta name="keywords" content="taller mecanico toluca, taller automotriz, afinacion, frenos, mecanico cerca de mi, speedcenter">
+<meta property="og:title" content="SpeedCenter · Taller Automotriz en Toluca">
+<meta property="og:description" content="Cotiza tu servicio automotriz en línea. Diagnóstico honesto, refacciones garantizadas, precios claros.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "SpeedCenter",
+  "image": "",
+  "telephone": "+527226876487",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cda. de Uniroyal 4, La Michoacana",
+    "addressLocality": "San Jorge Pueblo Nuevo, Toluca de Lerdo",
+    "postalCode": "52166",
+    "addressCountry": "MX"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "15:00" }
+  ],
+  "sameAs": ["https://www.facebook.com/share/1GWo7BNoPD/", "https://www.instagram.com/speed.center.metepec"],
+  "priceRange": "$$"
+}
+</script>
+<style>
+  :root{
+    --rojo:#E23636; --rojo-2:#C42A2A; --rojo-luz:#FF6B5B;
+    --carbon:#141212; --carbon-2:#1E1B1B; --carbon-3:#2A2525;
+    --crema:#F7F4EF; --crema-2:#EFEAE1;
+    --texto:#181414; --texto-mute:#726B66; --borde:#E7E1D8;
+    --exito:#2F8F5F;
+    --serif:"Fraunces", Georgia, serif;
+    --sans:"Inter", system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--texto);background:var(--crema);line-height:1.6;overflow-x:hidden;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .contenedor{max-width:1180px;margin:0 auto;padding:0 24px;}
+  ::selection{background:var(--rojo);color:#fff;}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visto{opacity:1;transform:translateY(0);}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:100px;font-weight:700;font-size:14.5px;cursor:pointer;border:none;transition:.25s cubic-bezier(.4,0,.2,1);font-family:var(--sans);letter-spacing:.2px;}
+  .btn-primario{background:var(--rojo);color:#fff;box-shadow:0 10px 28px rgba(226,54,54,.35);}
+  .btn-primario:hover{background:var(--rojo-2);transform:translateY(-2px);box-shadow:0 14px 34px rgba(226,54,54,.42);}
+  .btn-oscuro{background:var(--carbon);color:#fff;}
+  .btn-oscuro:hover{background:var(--carbon-2);transform:translateY(-2px);}
+  .btn-fantasma{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);}
+  .btn-fantasma:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(247,244,239,.78);backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid var(--borde);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .logo{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:700;font-size:22px;color:var(--carbon);letter-spacing:-.3px;}
+  .logo .dot{width:7px;height:7px;border-radius:50%;background:var(--rojo);display:inline-block;}
+  .nav-links{display:flex;gap:32px;font-weight:600;font-size:14px;color:var(--texto-mute);}
+  .nav-links a{position:relative;padding-bottom:2px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--rojo);transition:.25s ease;}
+  .nav-links a:hover{color:var(--texto);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--carbon);}
+  @media (max-width:900px){
+    .nav-links{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--carbon);color:#fff;overflow:hidden;padding:56px 0 130px;}
+  .hero .grano{position:absolute;inset:0;opacity:.35;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);background-size:3px 3px;}
+  .hero .glow{position:absolute;top:-20%;right:-10%;width:640px;height:640px;background:radial-gradient(circle, rgba(226,54,54,.35) 0%, transparent 70%);filter:blur(10px);}
+  .hero .glow2{position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle, rgba(226,54,54,.12) 0%, transparent 70%);}
+  .hero-top-bar{position:relative;display:flex;justify-content:flex-end;gap:20px;padding-bottom:34px;font-size:12.5px;color:rgba(255,255,255,.55);flex-wrap:wrap;}
+  .hero-top-bar span{display:inline-flex;align-items:center;gap:7px;}
+  @media (max-width:900px){.hero-top-bar{justify-content:center;}}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;}}
+  .badge-hero{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:9px 18px;border-radius:100px;font-size:12.5px;font-weight:600;margin-bottom:28px;color:rgba(255,255,255,.85);}
+  .badge-hero .dot{width:6px;height:6px;border-radius:50%;background:#7fe0a8;}
+  .hero h1{font-family:var(--serif);font-size:58px;font-weight:700;line-height:1.04;letter-spacing:-1.4px;margin-bottom:22px;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--rojo-luz);}
+  @media (max-width:900px){.hero h1{font-size:42px;}}
+  .hero p.sub{font-size:17.5px;color:rgba(255,255,255,.62);max-width:460px;margin-bottom:34px;font-weight:400;}
+  @media (max-width:900px){.hero p.sub{margin-left:auto;margin-right:auto;}}
+  .hero-botones{display:flex;gap:14px;flex-wrap:wrap;}
+  @media (max-width:900px){.hero-botones{justify-content:center;}}
+  .hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid rgba(255,255,255,.1);padding-top:28px;}
+  @media (max-width:900px){.hero-stats{justify-content:center;flex-wrap:wrap;gap:28px;}}
+  .hero-stats div{padding-right:36px;}
+  .hero-stats div strong{display:block;font-family:var(--serif);font-size:30px;font-weight:700;line-height:1;}
+  .hero-stats div small{font-size:12px;color:rgba(255,255,255,.5);font-weight:500;}
+
+  .hero-visual{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:32px;backdrop-filter:blur(8px);}
+  .hero-visual .tag{display:inline-block;background:var(--rojo);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:100px;margin-bottom:18px;letter-spacing:.4px;}
+  .hero-visual h3{font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:18px;}
+  .check-list{display:flex;flex-direction:column;gap:16px;}
+  .check-list div{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:rgba(255,255,255,.82);}
+  .check-list .ico{width:22px;height:22px;flex-shrink:0;border-radius:6px;background:rgba(127,224,168,.16);color:#7fe0a8;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;}
+
+  /* ---------- SECCIONES ---------- */
+  section{padding:110px 0;}
+  .seccion-titulo{max-width:660px;margin:0 auto 60px;}
+  .seccion-titulo.centrado{text-align:center;}
+  .kicker{color:var(--rojo);font-weight:700;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .seccion-titulo.centrado .kicker{justify-content:center;}
+  .kicker::before{content:"";width:22px;height:1.5px;background:var(--rojo);display:inline-block;}
+  .seccion-titulo h2{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--carbon);margin-bottom:14px;letter-spacing:-1px;line-height:1.1;}
+  .seccion-titulo p{color:var(--texto-mute);font-size:16px;}
+
+  /* ---------- SERVICIOS ---------- */
+  .servicios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--borde);border:1px solid var(--borde);border-radius:20px;overflow:hidden;}
+  @media (max-width:900px){.servicios-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.servicios-grid{grid-template-columns:1fr;}}
+  .servicio-card{background:#fff;padding:36px 30px;transition:.3s ease;position:relative;}
+  .servicio-card:hover{background:var(--carbon);}
+  .servicio-card:hover h3, .servicio-card:hover p{color:#fff;}
+  .servicio-card:hover p{color:rgba(255,255,255,.55);}
+  .servicio-ico{width:46px;height:46px;border-radius:12px;background:var(--crema-2);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px;transition:.3s ease;}
+  .servicio-card:hover .servicio-ico{background:var(--rojo);}
+  .servicio-card h3{font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:9px;color:var(--carbon);transition:.3s ease;}
+  .servicio-card p{font-size:14px;color:var(--texto-mute);transition:.3s ease;}
+
+  /* ---------- PROCESO (Cómo trabajamos) ---------- */
+  .proceso-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;position:relative;}
+  @media (max-width:900px){.proceso-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.proceso-grid{grid-template-columns:1fr;}}
+  .proceso-item{position:relative;}
+  .proceso-item .num{font-family:var(--serif);font-size:46px;font-weight:700;color:var(--rojo);opacity:.9;line-height:1;margin-bottom:16px;}
+  .proceso-item h4{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--carbon);}
+  .proceso-item p{font-size:13.5px;color:var(--texto-mute);}
+  .proceso-item:not(:last-child)::after{content:"";display:none;}
+  @media (min-width:901px){
+    .proceso-item:not(:last-child)::after{display:block;content:"→";position:absolute;top:8px;right:-28px;font-size:20px;color:var(--borde);}
+  }
+
+  /* ---------- POR QUÉ ELEGIRNOS (banda oscura) ---------- */
+  .porque{background:var(--carbon);color:#fff;}
+  .porque .seccion-titulo h2{color:#fff;}
+  .porque .seccion-titulo p{color:rgba(255,255,255,.5);}
+  .porque-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden;}
+  @media (max-width:900px){.porque-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.porque-grid{grid-template-columns:1fr;}}
+  .porque-item{background:var(--carbon-2);padding:34px 26px;}
+  .porque-item .num{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--rojo-luz);margin-bottom:14px;line-height:1;}
+  .porque-item h4{font-size:15.5px;font-weight:700;margin-bottom:8px;}
+  .porque-item p{font-size:13.5px;color:rgba(255,255,255,.5);}
+
+  /* ---------- FAQ ---------- */
+  .faq-lista{max-width:820px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--borde);}
+  .faq-pregunta{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 4px;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--serif);font-size:18px;font-weight:600;color:var(--carbon);}
+  .faq-pregunta .signo{font-family:var(--sans);font-size:22px;color:var(--rojo);flex-shrink:0;transition:.25s ease;}
+  .faq-item.abierto .faq-pregunta .signo{transform:rotate(45deg);}
+  .faq-respuesta{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .faq-item.abierto .faq-respuesta{max-height:260px;}
+  .faq-respuesta p{padding:0 4px 26px;font-size:14.5px;color:var(--texto-mute);max-width:680px;}
+
+  /* ---------- FORMULARIO ---------- */
+  .form-seccion{background:var(--crema);}
+  .form-caja{max-width:660px;margin:0 auto;background:#fff;border:1px solid var(--borde);border-radius:24px;padding:44px;box-shadow:0 30px 70px rgba(20,18,18,.08);position:relative;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  @media (max-width:560px){.form-grid{grid-template-columns:1fr;}}
+  .campo{display:flex;flex-direction:column;gap:7px;}
+  .campo.full{grid-column:1/-1;}
+  .campo label{font-size:12.5px;font-weight:700;color:var(--carbon);letter-spacing:.2px;}
+  .campo input, .campo select, .campo textarea{padding:13px 15px;border:1.5px solid var(--borde);border-radius:11px;font-size:14.5px;font-family:var(--sans);background:var(--crema);transition:.15s ease;}
+  .campo input:focus, .campo select:focus, .campo textarea:focus{outline:none;border-color:var(--rojo);background:#fff;box-shadow:0 0 0 4px rgba(226,54,54,.08);}
+  .campo textarea{min-height:92px;resize:vertical;}
+  #btn-enviar-form{width:100%;justify-content:center;margin-top:8px;font-size:15.5px;padding:16px;}
+  #mensaje-form{margin-top:16px;padding:14px 16px;border-radius:11px;font-size:14px;font-weight:600;display:none;}
+  #mensaje-form.ok{display:block;background:#e7f6ee;color:var(--exito);border:1px solid #bfe6cf;}
+  #mensaje-form.error{display:block;background:#fdecea;color:#c0392b;border:1px solid #f5c6c0;}
+  .form-privacidad{font-size:11.5px;color:var(--texto-mute);margin-top:16px;text-align:center;}
+
+  /* ---------- UBICACIÓN ---------- */
+  .ubicacion-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:stretch;}
+  @media (max-width:860px){.ubicacion-grid{grid-template-columns:1fr;}}
+  .ubicacion-info{background:#fff;border:1px solid var(--borde);border-radius:22px;padding:38px;}
+  .ubicacion-fila{display:flex;gap:16px;margin-bottom:26px;}
+  .ubicacion-fila:last-child{margin-bottom:0;}
+  .ubicacion-ico{width:42px;height:42px;border-radius:11px;background:var(--crema-2);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .ubicacion-fila h5{font-size:13px;font-weight:700;color:var(--carbon);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;}
+  .ubicacion-fila p{font-size:14.5px;color:var(--texto-mute);}
+  .ubicacion-fila .horario-fila{display:flex;justify-content:space-between;font-size:14px;color:var(--texto-mute);padding:3px 0;}
+  .ubicacion-fila .horario-fila strong{color:var(--carbon);}
+  .redes-sociales{display:flex;gap:10px;margin-top:6px;}
+  .red-social{width:38px;height:38px;border-radius:10px;background:var(--carbon);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;transition:.2s ease;}
+  .red-social:hover{background:var(--rojo);transform:translateY(-2px);}
+  .mapa-caja{border-radius:22px;overflow:hidden;border:1px solid var(--borde);min-height:340px;}
+  .mapa-caja iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--carbon);color:rgba(255,255,255,.7);padding:64px 0 28px;border-top:1px solid rgba(255,255,255,.06);}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr;text-align:center;}}
+  .footer-logo{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:700;font-size:21px;color:#fff;margin-bottom:16px;}
+  .footer-logo .dot{width:6px;height:6px;border-radius:50%;background:var(--rojo);}
+  @media (max-width:760px){.footer-logo{justify-content:center;}}
+  footer p{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.5);}
+  footer h5{font-size:11.5px;text-transform:uppercase;letter-spacing:1.4px;color:#fff;margin-bottom:18px;font-weight:700;}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+  footer ul a{font-size:13.5px;color:rgba(255,255,255,.55);}
+  footer ul a:hover{color:var(--rojo-luz);}
+  .footer-redes{display:flex;gap:10px;margin-top:16px;}
+  @media (max-width:760px){.footer-redes{justify-content:center;}}
+  .footer-redes a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:15px;transition:.2s ease;}
+  .footer-redes a:hover{background:var(--rojo);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:12px;color:rgba(255,255,255,.35);}
+
+  .wa-flotante{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 12px 30px rgba(37,211,102,.4);z-index:60;transition:.2s ease;}
+  .wa-flotante:hover{transform:scale(1.08);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="contenedor">
+    <nav>
+      <a href="#inicio" class="logo">Speed<span class="dot"></span>Center</a>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto">Ubicación</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#cotiza" class="btn btn-oscuro">Cotizar ahora</a>
+        <button class="menu-toggle" aria-label="Menú">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="grano"></div>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+  <div class="contenedor">
+    <div class="hero-top-bar">
+      <span>🕐 Lun–Vie 9:00–18:00 · Sáb 10:00–15:00</span>
+      <span>📍 San Jorge Pueblo Nuevo, Toluca</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="badge-hero"><span class="dot"></span> Taller automotriz en Toluca</span>
+        <h1>Tu auto en manos <em>de confianza</em>, sin letras chiquitas.</h1>
+        <p class="sub">Diagnóstico honesto, refacciones garantizadas y precios claros desde el primer momento. Cotiza tu servicio en menos de un minuto.</p>
+        <div class="hero-botones">
+          <a href="#cotiza" class="btn btn-primario">Cotizar mi servicio →</a>
+          <a href="tel:+527226876487" class="btn btn-fantasma">Llamar ahora</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>100%</strong><small>Diagnóstico transparente</small></div>
+          <div><strong>50%</strong><small>Anticipo, sin sorpresas</small></div>
+          <div><strong>24h</strong><small>Respuesta por WhatsApp</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span class="tag">Cotización gratis</span>
+        <h3>¿Por qué cotizar con nosotros?</h3>
+        <div class="check-list">
+          <div><span class="ico">✓</span> Te contactamos por WhatsApp en cuanto recibimos tu solicitud.</div>
+          <div><span class="ico">✓</span> Cotización clara antes de tocar tu auto.</div>
+          <div><span class="ico">✓</span> Refacciones nuevas y garantizadas.</div>
+          <div><span class="ico">✓</span> Sin costos ocultos ni sorpresas al final.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Nuestros servicios</span>
+      <h2>Todo lo que tu auto necesita</h2>
+      <p>Servicio integral para que tu vehículo funcione como el primer día.</p>
+    </div>
+    <div class="servicios-grid reveal">
+      <div class="servicio-card"><div class="servicio-ico">🛠️</div><h3>Afinación mayor y menor</h3><p>Rendimiento óptimo del motor con revisión completa de componentes clave.</p></div>
+      <div class="servicio-card"><div class="servicio-ico">🛑</div><h3>Frenos</h3><p>Balatas, discos y sistema de frenado revisado a fondo para tu seguridad.</p></div>
+      <div class="servicio-card"><div class="servicio-ico">🔍</div><h3>Diagnóstico computarizado</h3><p>Detectamos la falla real antes de cotizar cualquier reparación.</p></div>
+      <div class="servicio-card"><div class="servicio-ico">🧯</div><h3>Sistema eléctrico</h3><p>Batería, alternador y arnés revisados por especialistas.</p></div>
+      <div class="servicio-card"><div class="servicio-ico">⚙️</div><h3>Suspensión y dirección</h3><p>Manejo suave y seguro en cualquier tipo de camino.</p></div>
+      <div class="servicio-card"><div class="servicio-ico">🧴</div><h3>Mantenimiento preventivo</h3><p>Cambios de aceite, filtros y líquidos en tiempo y forma.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Nuestro proceso</span>
+      <h2>Cómo trabajamos, paso a paso</h2>
+      <p>Transparente de principio a fin, para que sepas exactamente qué esperar.</p>
+    </div>
+    <div class="proceso-grid reveal">
+      <div class="proceso-item"><div class="num">01</div><h4>Cotizas en línea</h4><p>Nos cuentas qué le pasa a tu auto desde este mismo sitio, en menos de un minuto.</p></div>
+      <div class="proceso-item"><div class="num">02</div><h4>Te contactamos</h4><p>Un asesor te escribe por WhatsApp o te llama para confirmar detalles y agendar.</p></div>
+      <div class="proceso-item"><div class="num">03</div><h4>Diagnóstico y aprobación</h4><p>Revisamos tu auto y te presentamos el costo por escrito antes de tocar nada.</p></div>
+      <div class="proceso-item"><div class="num">04</div><h4>Reparación y entrega</h4><p>Trabajamos con refacciones garantizadas y te entregamos en el tiempo acordado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="porque" id="porque">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Nuestro compromiso</span>
+      <h2>Por qué confían en SpeedCenter</h2>
+    </div>
+    <div class="porque-grid reveal">
+      <div class="porque-item"><div class="num">01</div><h4>Diagnóstico honesto</h4><p>Te decimos exactamente qué necesita tu auto, sin inflar el problema.</p></div>
+      <div class="porque-item"><div class="num">02</div><h4>Precios claros</h4><p>Cotización por escrito antes de iniciar cualquier trabajo.</p></div>
+      <div class="porque-item"><div class="num">03</div><h4>Refacciones garantizadas</h4><p>Piezas nuevas, con garantía real, no genéricas de dudosa calidad.</p></div>
+      <div class="porque-item"><div class="num">04</div><h4>Entrega puntual</h4><p>Respetamos los tiempos de entrega que te comprometemos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Para que no quede ninguna duda</h2>
+      <p>Estas son las condiciones con las que trabajamos todos los servicios.</p>
+    </div>
+    <div class="faq-lista reveal">
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Cuánto tiempo tarda mi cotización en tener validez?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>Cada cotización tiene una validez de 7 días a partir de su expedición. Pasado ese tiempo, es necesario solicitar una nueva cotización, ya que los precios de refacciones pueden variar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Necesito dar anticipo?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>Sí: se solicita el 100% del costo de las refacciones y el 50% de la mano de obra para comenzar el trabajo. El saldo restante se liquida al 100% para poder entregarte el vehículo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Las refacciones tienen garantía?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>Sí, trabajamos con refacciones nuevas. Cuando son piezas originales, te lo indicamos claramente dentro de tu cotización.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Qué pasa si cambia algo durante la reparación?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>La cotización se basa en las necesidades observadas al inicio. Si durante el servicio detectamos algo adicional, te lo hacemos saber antes de continuar, para que lo autorices.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Puedo cancelar mi servicio?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>Sí, pero debe solicitarse con al menos 12 horas de anticipación. De lo contrario, el anticipo entregado no se conserva como saldo a favor.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pregunta">¿Cuánto tiempo tengo para recoger mi auto una vez terminado?<span class="signo">+</span></button>
+        <div class="faq-respuesta"><p>Una vez que te notificamos que el servicio está listo, cuentas con 3 días hábiles para recogerlo y liquidarlo. Pasado ese tiempo, se genera una pensión de $50.00 por día.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-seccion" id="cotiza">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Empecemos</span>
+      <h2>Solicita tu cotización gratis</h2>
+      <p>Cuéntanos qué necesita tu auto y te contactamos por WhatsApp o llamada en cuanto lo revisemos.</p>
+    </div>
+    <div class="form-caja reveal">
+      <form id="form-prospecto">
+        <div class="form-grid">
+          <div class="campo"><label>Nombre completo *</label><input type="text" id="f-nombre" required placeholder="Ej. Juan Pérez"></div>
+          <div class="campo"><label>Teléfono / WhatsApp *</label><input type="tel" id="f-telefono" required placeholder="Ej. 722 123 4567"></div>
+        </div>
+        <div class="form-grid">
+          <div class="campo"><label>Correo (opcional)</label><input type="email" id="f-correo" placeholder="tucorreo@ejemplo.com"></div>
+          <div class="campo"><label>Servicio de interés</label>
+            <select id="f-servicio">
+              <option value="">Selecciona…</option>
+              <option>Afinación</option>
+              <option>Frenos</option>
+              <option>Diagnóstico computarizado</option>
+              <option>Sistema eléctrico</option>
+              <option>Suspensión y dirección</option>
+              <option>Mantenimiento preventivo</option>
+              <option>Otro / No estoy seguro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="campo"><label>Marca del auto</label><input type="text" id="f-marca" placeholder="Ej. Nissan"></div>
+          <div class="campo"><label>Modelo</label><input type="text" id="f-modelo" placeholder="Ej. Versa"></div>
+        </div>
+        <div class="form-grid">
+          <div class="campo"><label>Año del auto</label><input type="number" id="f-anio" placeholder="Ej. 2020" min="1980" max="2030"></div>
+          <div class="campo"></div>
+        </div>
+        <div class="campo full" style="margin-bottom:16px;">
+          <label>Cuéntanos qué le pasa a tu auto (opcional)</label>
+          <textarea id="f-mensaje" placeholder="Ej. Hace un ruido raro al frenar..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primario" id="btn-enviar-form">Enviar solicitud de cotización</button>
+        <div id="mensaje-form"></div>
+        <p class="form-privacidad">Al enviar este formulario aceptas que te contactemos por WhatsApp, llamada o correo para darte seguimiento a tu cotización.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="contenedor">
+    <div class="seccion-titulo centrado reveal">
+      <span class="kicker">Visítanos</span>
+      <h2>Encuéntranos en Toluca</h2>
+    </div>
+    <div class="ubicacion-grid reveal">
+      <div class="ubicacion-info">
+        <div class="ubicacion-fila">
+          <div class="ubicacion-ico">📍</div>
+          <div><h5>Dirección</h5><p>Cda. de Uniroyal 4, La Michoacana,<br>52166 San Jorge Pueblo Nuevo, Toluca de Lerdo</p></div>
+        </div>
+        <div class="ubicacion-fila">
+          <div class="ubicacion-ico">📞</div>
+          <div><h5>Teléfono</h5><p><a href="tel:+527226876487">722 687 6487</a></p></div>
+        </div>
+        <div class="ubicacion-fila">
+          <div class="ubicacion-ico">🕐</div>
+          <div>
+            <h5>Horario de atención</h5>
+            <div class="horario-fila"><span>Lunes a viernes</span><strong>9:00 – 18:00</strong></div>
+            <div class="horario-fila"><span>Sábados</span><strong>10:00 – 15:00</strong></div>
+            <div class="horario-fila"><span>Domingos</span><strong>Cerrado</strong></div>
+          </div>
+        </div>
+        <div class="ubicacion-fila">
+          <div class="ubicacion-ico">🌐</div>
+          <div>
+            <h5>Síguenos</h5>
+            <div class="redes-sociales">
+              <a class="red-social" href="https://www.facebook.com/share/1GWo7BNoPD/" target="_blank" rel="noopener">f</a>
+              <a class="red-social" href="https://www.instagram.com/speed.center.metepec" target="_blank" rel="noopener">◎</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mapa-caja">
+        <iframe src="https://www.google.com/maps?q=Cda.+de+Uniroyal+4,+La+Michoacana,+52166+San+Jorge+Pueblo+Nuevo,+Toluca+de+Lerdo&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de SpeedCenter"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Speed<span class="dot"></span>Center</div>
+        <p>Taller automotriz de confianza en Toluca. Diagnóstico honesto, refacciones garantizadas y precios claros desde el primer momento.</p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/share/1GWo7BNoPD/" target="_blank" rel="noopener" title="Facebook">f</a>
+          <a href="https://www.instagram.com/speed.center.metepec" target="_blank" rel="noopener" title="Instagram">◎</a>
+        </div>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li>Cda. de Uniroyal 4, La Michoacana,<br>52166 San Jorge Pueblo Nuevo, Toluca</li>
+          <li><a href="tel:+527226876487">722 687 6487</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Enlaces</h5>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#cotiza">Cotizar servicio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="anio-actual"></span> SpeedCenter · Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/527226876487" class="wa-flotante" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">💬</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
